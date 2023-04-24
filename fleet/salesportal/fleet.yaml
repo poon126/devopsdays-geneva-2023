@@ -37,11 +37,11 @@ targetCustomizations:
             databaseName: sales-portal
         ingress:
           annotations:
-            cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+            cert-manager.io/cluster-issuer: letsencrypt-prod
         dotnet:
           environment: Development
           enableSwagger: true
-          enableOpenTelemetry: false
+          enableOpenTelemetry: true
           skipCertificateValidation: true
           logLevel: Debug
         mongodb:
