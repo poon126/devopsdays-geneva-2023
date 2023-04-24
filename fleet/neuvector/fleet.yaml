@@ -17,7 +17,7 @@ helm:
           enabled: true
           ingressClassName: nginx
           annotations:
-            cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+            cert-manager.io/cluster-issuer: letsencrypt-prod
           tls: true
           secretName: neuvector-tls-secret
 targetCustomizations:
@@ -30,5 +30,5 @@ targetCustomizations:
             enabled: true
           manager:
             ingress:
-              host: neuvector.W.X.Y.Z.sslip.io
+              host: neuvector.34.244.35.243.sslip.io
     clusterName: demo
